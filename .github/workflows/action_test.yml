@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v3
       - name: testing me
         id: action
-        uses: Tripplo-Software/create-env@v1.1
+        uses: ./
         with:
           env: |
             endpoint_app: dev-de.tripplo.co
@@ -19,7 +19,8 @@ jobs:
           AKIN: tola
       - name: results
         run: |
-          echo ${{ steps.action.outputs.status }}
+          echo dddd
+          echo ${{ steps.action.outputs.envs }}
           ls
           echo "showing test file"
           echo $(cat .env)

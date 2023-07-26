@@ -7,6 +7,8 @@ inputs:
 outputs:
   status:
     description: failed | success
+  envs:
+    description: space separated list of environment variables
 runs:
   using: node16
   main: dist/index.js
