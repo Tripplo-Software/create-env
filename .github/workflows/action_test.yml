@@ -1,0 +1,25 @@
+name: action_test
+on: push
+jobs:
+  create_env:
+    name: Test env
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: testing me
+        id: action
+        uses: ./
+        with:
+          envs: |
+            endpoint_app: dev-de.tripplo.co
+            endpoint_api: dev-dep:tripplo.co
+            name: ${{ env.AKIN }}
+        env:
+          AKIN: tola
+      - name: results
+        run: |
+          echo ${{ steps.action.outputs.status }}
+          ls
+          echo "showing test file"
+          echo $(cat .env)

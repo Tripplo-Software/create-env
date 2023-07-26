@@ -1,0 +1,12 @@
+name: Create .env file
+description: This action creates .env file from the specified multiline variables
+inputs:
+  env: 
+    required: true
+    description:  Multiline Environment Variables
+outputs:
+  status:
+    description: failed | success
+runs:
+  using: node16
+  main: dist/index.js
