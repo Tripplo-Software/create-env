@@ -4,7 +4,7 @@ const fs = require('fs');
 async function run() {
     try {
 
-        const envs = core.getMultilineInput('envs', { trimWhitespace: true, required: true });
+        const envs = core.getMultilineInput('env', { trimWhitespace: true, required: true });
         envs.forEach(env => {
             const keyValues = env.split(':')
             const value =keyValues.splice(1, keyValues.length -1).join(':')

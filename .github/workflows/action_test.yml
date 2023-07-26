@@ -11,7 +11,7 @@ jobs:
         id: action
         uses: ./
         with:
-          envs: |
+          env: |
             endpoint_app: dev-de.tripplo.co
             endpoint_api: dev-dep:tripplo.co
             name: ${{ env.AKIN }}

@@ -4,18 +4,20 @@ This action prints "Hello World" or "Hello" + the name of a person to greet to t
 
 ## Inputs
 
-## `email`
+## `env`
 
-**Required** The name of the person to greet. Default `"peterakinlolu1@gmail.com"`.
+**Required** Multiline envs
 
 ## Outputs
 
-## `time`
+## `status`
 
-The time we greeted you.
+it can either be success or failure
 
 ## Example usage
 
-uses: actions/hello-world-javascript-action@v1.1
+uses: Tripplo-Software/create-env
 with:
-  who-to-greet: 'Mona the Octocat'
+  env: |
+    ENV1: jajeruernare
+    ENV2: hjarir99435:234234
