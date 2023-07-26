@@ -1,5 +1,6 @@
 const core = require('@actions/core');
 const fs = require('fs');
+const os = require('os');
 
 async function run() {
     try {
@@ -8,7 +9,7 @@ async function run() {
         envs.forEach(env => {
             const keyValues = env.split(':')
             const value =keyValues.splice(1, keyValues.length -1).join(':')
-            fs.writeFileSync('.env', `${keyValues[0].trim()}=${value.trim()}\n`, { flag: 'a' })
+            fs.writeFileSync('./.env', `${keyValues[0].trim()}=${value.trim()}${os.EOL}`, { flag: 'a' })
         })
         core.setOutput('status', 'success');
     } catch (error) {

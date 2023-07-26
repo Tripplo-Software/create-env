@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v3
       - name: testing me
         id: action
-        uses: ./
+        uses: Tripplo-Software/create-env@v1.1
         with:
           env: |
             endpoint_app: dev-de.tripplo.co
