@@ -2840,7 +2840,7 @@ async function run() {
     try {
 
         const envs = core.getMultilineInput('env', { trimWhitespace: true, required: true });
-        let envList = 'dsd'
+        let envList = ''
         envs.forEach(env => {
             const keyValues = env.split(':');
             const value =keyValues.splice(1, keyValues.length -1).join(':');
