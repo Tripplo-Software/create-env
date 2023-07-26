@@ -15,6 +15,7 @@ jobs:
             endpoint_app: dev-de.tripplo.co
             endpoint_api: dev-dep:tripplo.co
             name: ${{ env.AKIN }}
+            stage:
         env:
           AKIN: tola
       - name: results
